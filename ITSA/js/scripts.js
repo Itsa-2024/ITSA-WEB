@@ -156,5 +156,15 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('scroll', playVideoOnScroll);
         window.addEventListener('load', playVideoOnScroll); // Play if already in view on load
     });
+    document.getElementById("navbar-brand").addEventListener("mouseenter", function() {
+        const slidingText = document.getElementById("slidingText");
+        slidingText.style.maxWidth = "400px"; // Adjust based on the length of the text
+        slidingText.style.opacity = "1";
+    });
     
+    document.getElementById("navbar-brand").addEventListener("mouseleave", function() {
+        const slidingText = document.getElementById("slidingText");
+        slidingText.style.maxWidth = "0";
+        slidingText.style.opacity = "0";
+    });
 });
